@@ -13466,12 +13466,12 @@ Once you have performed this implementation, the dataset will be stored in the v
 <p><strong>Answer:</strong>
 70.68% of the variance in the data is explained in total by the first and second principal component. 93.11% of the variance in the data is explained by the first four principal components.</p>
 <ol>
-<li>The first principal component (PC1): PC1 represents 44.3% of the variance. Milk(neg), grocery(neg) and detergents_paper(neg) spendings are represented by PC1. This confirms out initial findings in question 3 that these 3 features are correlated.</li>
-<li>The second principal component (PC2): PC2 represents 26.38% of the variance. Fresh(neg), frozen(neg) and delicatessen(neg) spendings are represented by PC2. </li>
-<li>The third principal component (PC3): PC3 represents 12.31% of the variance. Fresh(neg), frozen(pos) and delicatessen(pos) spendings are represented by PC3. </li>
-<li>The fourth principal component (PC4): PC4 represents 10.12% of the variance. Frozen(pos) and delicatessen(neg) spendings are represented by PC4. </li>
-<li>The fifth principal component (PC5): PC5 represents 4.85% of the variance. Milk(pos), detergents_paper(neg) and grocery(pos) spendings are represented by PC5.</li>
-<li>The sixth principal component (PC6): PC6 represents 2.04% of the variance. Milk(neg) and grocery(pos) spendings are represented by PC6. </li>
+<li>The first principal component (PC1): PC1 represents 44.3% of the variance. Milk, grocery and detergents_paper spendings are represented by PC1. This confirms out initial findings in question 3 that these 3 features are correlated. This could seperate out customer like supermarket.</li>
+<li>The second principal component (PC2): PC2 represents 26.38% of the variance. Fresh, frozen and delicatessen spendings are represented by PC2. This could seperate out customer like restaurant.</li>
+<li>The third principal component (PC3): PC3 represents 12.31% of the variance. Fresh, frozen and delicatessen spendings are represented by PC3. This is similar to PC2 that seperates out customer like restaurant.</li>
+<li>The fourth principal component (PC4): PC4 represents 10.12% of the variance. Frozen and delicatessen spendings are represented by PC4. This could seperate out special kinds of restaurants that use frozen food.</li>
+<li>The fifth principal component (PC5): PC5 represents 4.85% of the variance. Milk, detergents_paper and grocery spendings are represented by PC5.</li>
+<li>The sixth principal component (PC6): PC6 represents 2.04% of the variance. Milk and grocery spendings are represented by PC6. </li>
 </ol>
 
 </div>
@@ -14266,9 +14266,9 @@ Sample point 2 predicted to be in Cluster 0
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ol>
-<li>Segment 0 best represents customer 1 and it is predicted correctly.</li>
-<li>Segment 1 best represents customer 2 and it is predicted correctly.</li>
-<li>Segment 0 best represents customer 3 and it is predicted correctly.</li>
+<li>Segment 0 best represents customer 1 and it is predicted correctly. Segment 0 represents supermarkets. Customer 1 spends most in milk, grocery and detergents_paper. It is believed to be a supermarket.</li>
+<li>Segment 1 best represents customer 2 and it is predicted correctly. Segment 1 represents meat or seafood markets. Customer 2 spends most in frozen product. It is believed to be a kind of frozen market.</li>
+<li>Segment 0 best represents customer 3 and it is predicted correctly. Segment 0 represents supermarkets. Customer 3 spends most in grocery, detergents, and paper products. It is believed to be a supermarket.</li>
 </ol>
 
 </div>
@@ -14308,7 +14308,7 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> The impact on segment 1 should be greater than the impact on segment 0 because customers in segment 1 spend more on fresh and frozen products, they will want the products delivery more often than customers in segment 0. The wholesale distributor could try to change the delivery service to 3 days a week to customers in segment 0.</p>
+<p><strong>Answer:</strong> Two A/B tests should be run in this case, with one A/B test for each customer segment. For each A/B test, the experimental group should be the customers that using the new 3 days a week delivery service. The control group should still use the old 5 days a week delivery service. The impact on segment 1 should be greater than the impact on segment 0 because customers in segment 1 spend more on fresh and frozen products, they will want the products delivery more often than customers in segment 0. The wholesale distributor could try to change the delivery service to 3 days a week to customers in segment 0.</p>
 
 </div>
 </div>
